@@ -4,6 +4,7 @@ struct AddPlaceView: View {
 	@State private var title: String = ""
 	@State private var note: String = ""
 	@State private var image: UIImage?
+  @State private var kuva: UIImage?
 	@State private var shouldShowImagePicker = false
 
 	@Environment(\.managedObjectContext) private var viewContext
@@ -34,7 +35,7 @@ struct AddPlaceView: View {
 
 			Button(
 				action: {
-					Place.create(title: title, note: note, image: image, context: viewContext)
+          Place.create(title: title, note: note, image: image, context: viewContext, kuva: image)
 					presentationMode.wrappedValue.dismiss()
 				},
 				label: {

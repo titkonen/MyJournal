@@ -4,6 +4,7 @@ struct PlaceDetailView: View {
 	let title: String?
 	let subtitle: String?
 	let image: UIImage?
+  let kuva: UIImage?
 
 	var body: some View {
 		ScrollView {
@@ -16,6 +17,14 @@ struct PlaceDetailView: View {
 						.cornerRadius(8)
 						.shadow(radius: 10)
 				}
+        kuva.map{
+          Image(uiImage: $0)
+            .renderingMode(.original)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .cornerRadius(8)
+            .shadow(radius: 10)
+        }
 				title.map {
 					Text($0)
 						.font(.largeTitle)
@@ -38,7 +47,8 @@ struct PlaceDetailView_Previews: PreviewProvider {
 		PlaceDetailView(
 			title: "San Francisco",
 			subtitle: "Golden Gate was awesome",
-			image: UIImage(systemName: "photo")
+      image: UIImage(systemName: "photo"),
+      kuva: UIImage(systemName: "photo2")
 		)
 	}
 }
