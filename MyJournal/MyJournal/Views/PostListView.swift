@@ -24,7 +24,7 @@ struct PostListView: View {
           }.onDelete(perform: deletePlaces)
         }
         .listStyle(GroupedListStyle())
-        .overlay(places.isEmpty ? Text("Add a place using the button below") : nil, alignment: .center)
+        .overlay(places.isEmpty ? Text("Add a post using the button below") : nil, alignment: .center)
 
         NavigationLink(destination: AddPostView()) {
           HStack {

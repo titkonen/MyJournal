@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0F0C58AA27ECB4DF00A8C4C6 /* MyJournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0C58A927ECB4DF00A8C4C6 /* MyJournalApp.swift */; };
-		0F0C58AC27ECB4DF00A8C4C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0C58AB27ECB4DF00A8C4C6 /* ContentView.swift */; };
 		0F0C58AE27ECB4DF00A8C4C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F0C58AD27ECB4DF00A8C4C6 /* Assets.xcassets */; };
 		0F0C58B127ECB4DF00A8C4C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F0C58B027ECB4DF00A8C4C6 /* Preview Assets.xcassets */; };
 		0F2FC02427EDD3CB00B08221 /* JournalDatamodel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FC02227EDD3CB00B08221 /* JournalDatamodel.xcdatamodeld */; };
@@ -22,12 +21,15 @@
 		0F2FC03827EDD7D600B08221 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FC03727EDD7D600B08221 /* PostListView.swift */; };
 		0F2FC03A27EDDA2800B08221 /* PostItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FC03927EDDA2800B08221 /* PostItemView.swift */; };
 		0F2FC03C27EDDA8B00B08221 /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FC03B27EDDA8B00B08221 /* PostDetailView.swift */; };
+		0F2FC03E27EDE90600B08221 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FC03D27EDE90600B08221 /* SettingsView.swift */; };
+		0F2FC04027EDE92D00B08221 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FC03F27EDE92D00B08221 /* Appearance.swift */; };
+		0F2FC04227EDE94900B08221 /* LocalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FC04127EDE94900B08221 /* LocalNotifications.swift */; };
+		0F2FC04427EDE9D800B08221 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FC04327EDE9D800B08221 /* TabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0F0C58A627ECB4DF00A8C4C6 /* MyJournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyJournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F0C58A927ECB4DF00A8C4C6 /* MyJournalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyJournalApp.swift; sourceTree = "<group>"; };
-		0F0C58AB27ECB4DF00A8C4C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0F0C58AD27ECB4DF00A8C4C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F0C58B027ECB4DF00A8C4C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0F2FC02327EDD3CB00B08221 /* JournalDatamodel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JournalDatamodel.xcdatamodel; sourceTree = "<group>"; };
@@ -41,6 +43,10 @@
 		0F2FC03727EDD7D600B08221 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		0F2FC03927EDDA2800B08221 /* PostItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostItemView.swift; sourceTree = "<group>"; };
 		0F2FC03B27EDDA8B00B08221 /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
+		0F2FC03D27EDE90600B08221 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		0F2FC03F27EDE92D00B08221 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		0F2FC04127EDE94900B08221 /* LocalNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotifications.swift; sourceTree = "<group>"; };
+		0F2FC04327EDE9D800B08221 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +79,8 @@
 		0F0C58A827ECB4DF00A8C4C6 /* MyJournal */ = {
 			isa = PBXGroup;
 			children = (
-				0F2FC02F27EDD64900B08221 /* Views */,
 				0F0C58A927ECB4DF00A8C4C6 /* MyJournalApp.swift */,
-				0F0C58AB27ECB4DF00A8C4C6 /* ContentView.swift */,
+				0F2FC02F27EDD64900B08221 /* Views */,
 				0F2FC02E27EDD61900B08221 /* Supporting files and Components */,
 				0F2FC02527EDD45A00B08221 /* Core Data */,
 				0F0C58AD27ECB4DF00A8C4C6 /* Assets.xcassets */,
@@ -108,6 +113,9 @@
 			children = (
 				0F2FC02C27EDD5F800B08221 /* Data+Extension.swift */,
 				0F2FC03327EDD6D800B08221 /* ActionButtonBackgroundStyle.swift */,
+				0F2FC03F27EDE92D00B08221 /* Appearance.swift */,
+				0F2FC04127EDE94900B08221 /* LocalNotifications.swift */,
+				0F2FC04327EDE9D800B08221 /* TabBarView.swift */,
 			);
 			path = "Supporting files and Components";
 			sourceTree = "<group>";
@@ -120,6 +128,7 @@
 				0F2FC03727EDD7D600B08221 /* PostListView.swift */,
 				0F2FC03B27EDDA8B00B08221 /* PostDetailView.swift */,
 				0F2FC03927EDDA2800B08221 /* PostItemView.swift */,
+				0F2FC03D27EDE90600B08221 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,15 +211,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F0C58AC27ECB4DF00A8C4C6 /* ContentView.swift in Sources */,
 				0F2FC03A27EDDA2800B08221 /* PostItemView.swift in Sources */,
 				0F2FC02D27EDD5F800B08221 /* Data+Extension.swift in Sources */,
+				0F2FC04427EDE9D800B08221 /* TabBarView.swift in Sources */,
 				0F2FC02927EDD52A00B08221 /* NSManagedObjectContext+Extension.swift in Sources */,
 				0F2FC02427EDD3CB00B08221 /* JournalDatamodel.xcdatamodeld in Sources */,
 				0F2FC03627EDD71400B08221 /* AddPostView.swift in Sources */,
 				0F2FC03827EDD7D600B08221 /* PostListView.swift in Sources */,
+				0F2FC03E27EDE90600B08221 /* SettingsView.swift in Sources */,
+				0F2FC04227EDE94900B08221 /* LocalNotifications.swift in Sources */,
 				0F2FC02B27EDD58800B08221 /* CoreDataStack.swift in Sources */,
 				0F2FC03C27EDDA8B00B08221 /* PostDetailView.swift in Sources */,
+				0F2FC04027EDE92D00B08221 /* Appearance.swift in Sources */,
 				0F2FC03427EDD6D800B08221 /* ActionButtonBackgroundStyle.swift in Sources */,
 				0F2FC03227EDD67400B08221 /* ImagePicker.swift in Sources */,
 				0F0C58AA27ECB4DF00A8C4C6 /* MyJournalApp.swift in Sources */,
