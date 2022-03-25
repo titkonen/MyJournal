@@ -1,17 +1,15 @@
-//
-//  MyJournalApp.swift
-//  MyJournal
-//
-//  Created by Toni Itkonen on 24.3.2022.
-//
-
 import SwiftUI
 
 @main
 struct MyJournalApp: App {
+  
+  @State private var coreDataStack = CoreDataStack.shared
+  
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PostListView()
+//            .environment(\.managedObjectContext, coreDataStack.context)
+            .environment(\.managedObjectContext, CoreDataStack.shared.context)
         }
     }
 }
