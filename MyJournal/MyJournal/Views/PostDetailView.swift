@@ -24,14 +24,6 @@ struct PostDetailView: View {
             .cornerRadius(8)
             .shadow(radius: 10)
         }
-//        kuva.map{
-//          Image(uiImage: $0)
-//            .renderingMode(.original)
-//            .resizable()
-//            .aspectRatio(contentMode: .fit)
-//            .cornerRadius(8)
-//            .shadow(radius: 10)
-//        }
         title.map {
           Text($0)
             .font(.largeTitle)
@@ -52,8 +44,8 @@ struct PostDetailView: View {
 struct PostDetailView_Previews: PreviewProvider {
   static var previews: some View {
     PostDetailView(
-      title: "San Francisco",
-      subtitle: "Golden Gate was awesome",
+      title: "This is headline",
+      subtitle: "This is subtitle",
       image: UIImage(systemName: "photo")
     )
   }

@@ -20,12 +20,12 @@ struct AddPostView: View {
     ZStack(alignment: .bottomTrailing) {
       Form {
         Section(header: Text("Title")) {
-          TextField("Insert place title here", text: $title)
+          TextField("Insert title", text: $title)
             .autocapitalization(.words)
         }
 
         Section(header: Text("Notes")) {
-          TextField("Insert notes about the place here", text: $note)
+          TextField("Insert notes", text: $note)
             .autocapitalization(.sentences)
         }
 

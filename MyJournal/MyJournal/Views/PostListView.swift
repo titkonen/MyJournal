@@ -29,12 +29,12 @@ struct PostListView: View {
         NavigationLink(destination: AddPostView()) {
           HStack {
             Image(systemName: "plus.circle.fill")
-            Text("Add Place")
+            Text("Add Post")
           }
         }
         .buttonStyle(ActionButtonBackgroundStyle())
       }
-      .navigationBarTitle("PlaceTag")
+      .navigationBarTitle("My Journal")
     }
   }
 

@@ -41,8 +41,8 @@ struct PostItemView: View {
 struct PostItemView_Previews: PreviewProvider {
   static var previews: some View {
     PostItemView(
-      title: "San Francisco",
-      subtitle: "Golden gate was awesome",
+      title: "This is headline",
+      subtitle: "This is subtitle",
       image: UIImage(systemName: "photo")
     )
   }
