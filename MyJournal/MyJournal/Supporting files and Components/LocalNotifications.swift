@@ -31,8 +31,8 @@ class LocalNotifications {
     deleteReminder()
     userNotificationCenter.getNotificationSettings { settings in
       let content = UNMutableNotificationContent()
-      content.title = "Hello from MySport"
-      content.subtitle = "Have you done any activities today?"
+      content.title = "Hello from MyJournal"
+      content.subtitle = "How do you feel? Tag your feelings!"
       
       if settings.soundSetting == .enabled {
         content.sound = UNNotificationSound.default
@@ -47,7 +47,7 @@ class LocalNotifications {
       let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
       
       let reminder = UNNotificationRequest(
-        identifier: "kuchi-reminder",
+        identifier: "myjournal-reminder",
         content: content,
         trigger: trigger
       )
