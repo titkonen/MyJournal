@@ -4,8 +4,27 @@ import CoreData
 struct PostListView: View {
   @FetchRequest(entity: JournalEntity.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \JournalEntity.date, ascending: false)])
   private var places: FetchedResults<JournalEntity>
+  //private var friends: SectionedFetchResults<String, Friend>
+  
   @Environment(\.managedObjectContext) private var viewContext
 
+  @State private var searchTerm = "" // Search
+  
+  var searchQuery: Binding<String> {
+    Binding {
+      searchTerm
+    } set: { newValue in
+      searchTerm = newValue
+      guard !newValue.isEmpty else {
+        places.nsPredicate = nil
+        return
+      }
+      places.nsPredicate = NSPredicate(
+        format: "name contains[cd] %@",
+        newValue)
+    }
+  }
+  
   var body: some View {
     NavigationView {
       ZStack(alignment: .bottomTrailing) {
@@ -27,6 +46,7 @@ struct PostListView: View {
         }
         .buttonStyle(ActionButtonBackgroundStyle())
       }
+      .searchable(text: searchQuery)
       .navigationBarTitle("My Journal")
     }
   }
