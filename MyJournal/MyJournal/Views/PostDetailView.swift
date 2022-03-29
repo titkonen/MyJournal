@@ -19,7 +19,7 @@ struct PostDetailView: View {
             .shadow(radius: 10)
         }
         
-        Text("Date: \(date.formatted(date: .numeric, time: .omitted))")
+        Text("\(date.formatted(date: .numeric, time: .omitted))")
             .font(.caption)
 
         title.map {

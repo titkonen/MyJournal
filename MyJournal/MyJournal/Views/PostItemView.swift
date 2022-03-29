@@ -19,8 +19,10 @@ struct PostItemView: View {
       }
 
       VStack(alignment: .leading) {
-          Text("Date: \(date.formatted(date: .numeric, time: .omitted))")
+          Text("\(date.formatted(date: .numeric, time: .omitted))")
               .font(.caption)
+              .foregroundColor(Color.gray)
+              .padding(.bottom)
           title.map {
             Text($0)
               .font(.headline)

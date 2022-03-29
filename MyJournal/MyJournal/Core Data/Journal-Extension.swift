@@ -14,7 +14,7 @@ extension JournalEntity {
     newJournalPost.title = title?.isEmpty == false ? title : "Untitled"
     newJournalPost.note = note?.isEmpty == false ? note : nil
     newJournalPost.image = image?.pngData()
-    newJournalPost.date = date
+    newJournalPost.date = date  
     context.saveContext()
   }
 }
