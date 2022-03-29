@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddPostView: View {
+  @State var date: Date
   @State private var title: String = ""
   @State private var note: String = ""
   @State private var image: UIImage?
@@ -19,6 +20,10 @@ struct AddPostView: View {
   var body: some View {
     ZStack(alignment: .bottomTrailing) {
       Form {
+        Section(header: Text("Day")) {
+          DatePicker("Date", selection: $date, displayedComponents: .date)
+        }
+        
         Section(header: Text("Title")) {
           TextField("Insert title", text: $title)
             .autocapitalization(.words)
@@ -41,7 +46,7 @@ struct AddPostView: View {
 
       Button(
         action: {
-          JournalEntity.create(title: title, note: note, image: image, context: viewContext)
+          JournalEntity.create(date: date, title: title, note: note, image: image, context: viewContext)
           presentationMode.wrappedValue.dismiss()
         },
         label: {
@@ -82,7 +87,7 @@ struct AddPostView: View {
 
 struct AddPlaceView_Previews: PreviewProvider {
   static var previews: some View {
-    AddPostView()
+    AddPostView(date: Date())
   }
 }
 

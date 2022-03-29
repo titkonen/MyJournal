@@ -1,10 +1,3 @@
-//
-//  PostListView.swift
-//  MyJournal
-//
-//  Created by Toni Itkonen on 25.3.2022.
-//
-
 import SwiftUI
 import CoreData
 
@@ -26,7 +19,7 @@ struct PostListView: View {
         .listStyle(GroupedListStyle())
         .overlay(places.isEmpty ? Text("Add a post using the button below") : nil, alignment: .center)
 
-        NavigationLink(destination: AddPostView()) {
+        NavigationLink(destination: AddPostView(date: Date())) {
           HStack {
             Image(systemName: "plus.circle.fill")
             Text("Add Post")
@@ -40,6 +33,7 @@ struct PostListView: View {
 
   private func makeDetailView(from place: JournalEntity) -> PostDetailView {
     return PostDetailView(
+      date: place.date ?? Date(),
       title: place.title,
       subtitle: place.note,
       image: place.image?.uiImage
@@ -49,6 +43,7 @@ struct PostListView: View {
 
   private func makeItemView(from place: JournalEntity) -> PostItemView {
     return PostItemView(
+      date: place.date ?? Date(),
       title: place.title,
       subtitle: place.note,
       image: place.image?.uiImage

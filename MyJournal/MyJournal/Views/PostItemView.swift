@@ -1,13 +1,7 @@
-//
-//  PostItemView.swift
-//  MyJournal
-//
-//  Created by Toni Itkonen on 25.3.2022.
-//
-
 import SwiftUI
 
 struct PostItemView: View {
+  let date: Date
   let title: String?
   let subtitle: String?
   let image: UIImage?
@@ -25,6 +19,9 @@ struct PostItemView: View {
       }
 
       VStack(alignment: .leading) {
+        Text("Date: \(date.formatted(date: .numeric, time: .omitted))")
+            .font(.caption)
+        }
         title.map {
           Text($0)
             .font(.headline)
@@ -34,13 +31,14 @@ struct PostItemView: View {
             .font(.subheadline)
         }
       }
-    }
+    
   }
 }
 
 struct PostItemView_Previews: PreviewProvider {
   static var previews: some View {
     PostItemView(
+      date: Date(),
       title: "This is headline",
       subtitle: "This is subtitle",
       image: UIImage(systemName: "photo")

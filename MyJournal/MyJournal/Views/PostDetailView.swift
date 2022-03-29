@@ -1,13 +1,7 @@
-//
-//  PostDetailView.swift
-//  MyJournal
-//
-//  Created by Toni Itkonen on 25.3.2022.
-//
-
 import SwiftUI
 
 struct PostDetailView: View {
+  let date: Date
   let title: String?
   let subtitle: String?
   let image: UIImage?
@@ -24,6 +18,10 @@ struct PostDetailView: View {
             .cornerRadius(8)
             .shadow(radius: 10)
         }
+        
+        Text("Date: \(date.formatted(date: .numeric, time: .omitted))")
+            .font(.caption)
+
         title.map {
           Text($0)
             .font(.largeTitle)
@@ -44,6 +42,7 @@ struct PostDetailView: View {
 struct PostDetailView_Previews: PreviewProvider {
   static var previews: some View {
     PostDetailView(
+      date: Date(),
       title: "This is headline",
       subtitle: "This is subtitle",
       image: UIImage(systemName: "photo")

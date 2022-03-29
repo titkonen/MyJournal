@@ -3,6 +3,7 @@ import CoreData.NSManagedObjectContext
 
 extension JournalEntity {
   static func create(
+    date: Date,
     title: String?,
     note: String?,
     image: UIImage?,
